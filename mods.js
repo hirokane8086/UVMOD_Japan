@@ -858,7 +858,7 @@ modClasses = [
             this.select87108mhz = addRadioButton(this.modSpecificDiv, "86.4 - 108 MHz", "select87108mhz", "selectFm_radio");
             this.select88108mhz = addRadioButton(this.modSpecificDiv, "88 - 108 MHz", "select88108mhz", "selectFm_radio");
 
-            this.select87108mhz.checked = true;
+            this.select76108mhz.checked = true;
         }
 
         apply(firmwareData) {

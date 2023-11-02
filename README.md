@@ -1,5 +1,5 @@
 ## [CLICK HERE TO OPEN UVMOD](https://whosmatt.github.io/uvmod/)
-## [中文版 Open Chinese Version (maintained independently)](https://uvmod.xanyi.eu.org/)
+## [Open Chinese (中文) Version (maintained independently)](https://uvmod.xanyi.eu.org/)
 ## [Open Russian Version (maintained independently)](https://uvmod.valek.net.ru/)
 ## [Open Portuguese Version (maintained independently)](https://meshtastic.pt/QuanSheng/)
 

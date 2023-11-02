@@ -821,7 +821,7 @@ modClasses = [
     ,
     class Mod_AMOnAllBands extends FirmwareMod {
         constructor() {
-            super("AM 受信 on all Bands", "For some reason, the original firmware only allows the AM setting to work on band 2. This mod allows AM to work on any band.", 0);
+            super("全てのバンドでAM受信を有効にする", "For some reason, the original firmware only allows the AM setting to work on band 2. This mod allows AM to work on any band.", 0);
         }
 
         apply(firmwareData) {
@@ -850,7 +850,7 @@ modClasses = [
     ,
     class Mod_CustomFm_radio extends FirmwareMod {
         constructor() {
-            super("FM Radio Frequencies", "Changes the FM radio frequency range", "0");
+            super("FMラジオモードの受信範囲", "Changes the FM radio frequency range", "0");
 
             this.select6476mhz = addRadioButton(this.modSpecificDiv, "64 - 76 MHz", "select6476mhz", "selectFm_radio");
             this.select64108mhz = addRadioButton(this.modSpecificDiv, "64 - 108 MHz", "select64108mhz", "selectFm_radio");
@@ -900,7 +900,8 @@ modClasses = [
         }
     }
     ,
-    class Mod_AirCopy extends FirmwareMod {
+    
+/*    class Mod_AirCopy extends FirmwareMod {
         constructor() {
             super("AIR COPY Frequency", "Changes the frequency used by AIR COPY. The default value is 410.025 MHz. ", 0);
             this.inputFreq1 = addInputField(this.modSpecificDiv, "Air Copy Frequency (Hz)", "410025000");
@@ -934,7 +935,8 @@ modClasses = [
             return firmwareData;
         }
     }
-    ,
+    , */
+    
     class Mod_ChangeContrast extends FirmwareMod {
         constructor() {
             super("LCD Contrast", "Changes LCD contrast to any value from 0 to 63 (higher is darker). The default value is 31", 0);

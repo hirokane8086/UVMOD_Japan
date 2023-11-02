@@ -88,9 +88,9 @@ modClasses = [
             super("Custom Bootscreen", "Changes the bootscreen of the radio to an image, displayed for 2 seconds on startup. The PONMSG setting in the menu is ignored, custom bootscreen is always shown. Images are automatically compressed by removing blank space on top and bottom. Make a narrow banner if you need to save space. ", "up to 1024");
 
             this.selectTrollface = addRadioButton(this.modSpecificDiv, "Troll Face (933 Bytes)", "selectTrollface", "selectBootscreen");
-            this.selectQ = addRadioButton(this.modSpecificDiv, "Quansheng Q Logo (929 Bytes)", "selectQ", "selectBootscreen");
+//            this.selectQ = addRadioButton(this.modSpecificDiv, "Quansheng Q Logo (929 Bytes)", "selectQ", "selectBootscreen");
             this.selectUVMOD = addRadioButton(this.modSpecificDiv, "UVMOD Banner (214 Bytes)", "selectUVMOD", "selectBootscreen");
-            this.selectNOKIA = addRadioButton(this.modSpecificDiv, "NOKIA Logo (507 Bytes)", "selectNOKIA", "selectBootscreen");
+//            this.selectNOKIA = addRadioButton(this.modSpecificDiv, "NOKIA Logo (507 Bytes)", "selectNOKIA", "selectBootscreen");
             this.selectCustomFile = addRadioButton(this.modSpecificDiv, "Custom image (will be converted and compressed automatically, ideal size 128x64)", "selectCustom", "selectBootscreen");
             this.selectTrollface.checked = true;
 

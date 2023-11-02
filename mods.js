@@ -242,7 +242,7 @@ modClasses = [
     ,
     class Mod_SkipBootscreen extends FirmwareMod {
         constructor() {
-            super("Skip Bootscreen", "Skips the bootscreen and instantly goes to the main screen on powerup.", 0);
+            super("Skip Bootscreen", "起動画面をスキップし、起動時間の短縮に貢献します。", 0);
         }
 
         apply(firmwareData) {
@@ -263,7 +263,7 @@ modClasses = [
     ,
     class Mod_Font extends FirmwareMod {
         constructor() {
-            super("Font", "Changes the font to one of the following custom fonts: ", 0);
+            super("Font", "フォントを次のいずれかのカスタムフォントに変更します。 ", 0);
 
             this.selectVCR = addRadioButton(this.modSpecificDiv, "VCR Font, replaces big digits", "selectVCR", "selectFont");
             this.selectFuturistic = addRadioButton(this.modSpecificDiv, "Futuristic Font (by DO7OO), replaces big and small digits", "selectFuturistic", "selectFont");
@@ -290,7 +290,7 @@ modClasses = [
     ,
     class Mod_NegativeDisplay extends FirmwareMod {
         constructor() {
-            super("Negative Display", "Inverts the colors on the display.", 0);
+            super("Negative Display", "ディスプレイを白黒反転します。", 0);
         }
 
         apply(firmwareData) {
@@ -311,7 +311,7 @@ modClasses = [
     ,
     class Mod_FreqCopyTimeout extends FirmwareMod {
         constructor() {
-            super("Disable Freq Copy Timeout", "Prevents freq copy and CTCSS decoder from timing out with \"SCAN FAIL\", allowing both functions to run indefinitely until a signal is found.", 0);
+            super("Disable Freq Copy Timeout", "周波数コピーとCTCSSデコーダが「SCAN FAIL」でタイムアウトするのを防ぎ、信号が見つかるまで両方の機能を無期限に実行できるようにします。", 0);
         }
 
         apply(firmwareData) {
@@ -332,7 +332,7 @@ modClasses = [
     ,
     class Mod_DisableTX extends FirmwareMod {
         constructor() {
-            super("Disable TX completely", "Prevents transmitting on all frequencies, making the radio purely a receiver.", 0);
+            super("Disable TX completely", "すべての周波数での送信を防止し、無線機を純粋な受信機にします。", 0);
         }
 
         apply(firmwareData) {
@@ -351,7 +351,7 @@ modClasses = [
         }
     }
     ,
-    class Mod_EnableTXEverywhere extends FirmwareMod {
+/*    class Mod_EnableTXEverywhere extends FirmwareMod {
         constructor() {
             super("Enable TX everywhere", "DANGER! Allows transmitting on all frequencies. Only use this mod for testing, do not transmit on illegal frequencies!", 0);
             this.hidden = true;
@@ -372,7 +372,8 @@ modClasses = [
             return firmwareData;
         }
     }
-    ,
+    , 
+    
     class Mod_EnableTXEverywhereButAirBand extends FirmwareMod {
         constructor() {
             super("Enable TX everywhere except Air Band", "DANGER! Allows transmitting on all frequencies except air band (118 - 137 MHz). Only use this mod for testing, do not transmit on illegal frequencies!", 0);
@@ -387,8 +388,11 @@ modClasses = [
 
             return firmwareData;
         }
-    }
-    ,
+    }  
+    , 
+    
+
+    
     class Mod_CustomTXRange extends FirmwareMod {
         constructor() {
             super("Custom TX Range", "DANGER: This mod replaces the TX Disabled check with a simple function that either blocks a range of frequencies and allows all else, or vice versa. It can be used to do the same as 'Enable TX everywhere except Air Band', or it could also be used to make the radio only TX on PMR466. The preset values below are set to block Air Band and allow everything else.", 0);
@@ -424,9 +428,12 @@ modClasses = [
         }
     }
     ,
+    
+        */
+    
     class Mod_BacklightDuration extends FirmwareMod {
         constructor() {
-            super("Backlight Duration", "Sets a multiplier for the backlight duration.", 0);
+            super("Backlight Duration", "バックライト持続時間の乗数を設定します。", 0);
 
             this.select1 = addRadioButton(this.modSpecificDiv, "1x - up to 5s backlight (default value)", "select1", "selectBacklightDuration");
             this.select2 = addRadioButton(this.modSpecificDiv, "2x - up to 10s backlight", "select2", "selectBacklightDuration");
@@ -462,7 +469,7 @@ modClasses = [
     ,
     class Mod_MenuStrings extends FirmwareMod {
         constructor() {
-            super("Menu strings", "Changes text in the settings menu. The displayed JSON contains every string with offset, description and size. Only edit the string and dont use more characters than allowed by the size.", 0);
+            super("Menu strings", "設定メニューのテキストを変更します。表示される JSON には、オフセット、説明、サイズを含むすべての文字列が含まれます。文字列のみを編集し、サイズで許可されている文字数を超えて使用しないでください。", 0);
 
             // the  b l o c k
             const strings = [{ "offset": 56470, "description": "squelch", "size": 6, "string": "SQLCH" }, { "offset": 56477, "description": "step", "size": 6, "string": "STEP" }, { "offset": 56484, "description": "txpower", "size": 6, "string": "TXPWR" }, { "offset": 56491, "description": "r dcs", "size": 6, "string": "R_DCS" },
@@ -527,7 +534,7 @@ modClasses = [
     ,
     class Mod_MicGain extends FirmwareMod {
         constructor() {
-            super("Increase Mic Gain", "Gives the microphone gain an additional boost, making the microphone generally more sensitive.", 0);
+            super("Increase Mic Gain", "マイクのゲインをさらにブーストし、マイクの感度を全体的に高めます。", 0);
         }
 
         apply(firmwareData) {
@@ -551,7 +558,7 @@ modClasses = [
     ,
     class Mod_RogerBeep extends FirmwareMod {
         constructor() {
-            super("Roger Beep", "Changes the pitch of the two roger beep tones. Tone 1 plays for 150ms and tone 2 for 80ms. The defaults in this mod are similar to the Mototrbo beep. The maximum is 6347 Hz. ", 0);
+            super("Roger Beep", "送信終話時に付加するビープ音を変更します。トーン1は150ms、トーン2は80ms再生されます。このmodのデフォルトは、MOTOTRBO™(Motorolaの業務用無線機？) のビープ音に似ています。最大値は 6347 Hz です。 ", 0);
             this.inputTone1 = addInputField(this.modSpecificDiv, "Tone 1 frequency (Hz)", "1540");
             this.inputTone2 = addInputField(this.modSpecificDiv, "Tone 2 frequency (Hz)", "1310");
         }
@@ -589,7 +596,7 @@ modClasses = [
     ,
     class Mod_EnableSWDPort extends FirmwareMod {
         constructor() {
-            super("Enable SWD Port", "If you don't know what SWD is, you don't need this mod! Allows debugging via SWD. You will need to solder wires to the main board of the radio and connect them to specialized hardware. ", 0);
+            super("Enable SWD Port", "SWD（Serial Wire Debug）デバッグ用I/Fによるデバッグを許可します。メインボードにワイヤーをはんだ付けし、専用のハードウェアに接続する必要があります。 ", 0);
         }
 
         apply(firmwareData) {
@@ -695,7 +702,7 @@ modClasses = [
     ,
     class Mod_FrequencySteps extends FirmwareMod {
         constructor() {
-            super("Frequency Steps", "Changes the frequency steps.", 0);
+            super("Frequency Steps", "周波数ステップを変更します。", 0);
             this.inputStep1 = addInputField(this.modSpecificDiv, "Frequency Step 1 (Hz)", "2500");
             this.inputStep2 = addInputField(this.modSpecificDiv, "Frequency Step 2 (Hz)", "5000");
             this.inputStep3 = addInputField(this.modSpecificDiv, "Frequency Step 3 (Hz)", "6250");
@@ -740,7 +747,7 @@ modClasses = [
     ,
     class Mod_NOAAFrequencies extends FirmwareMod {
         constructor() {
-            super("NOAA Frequencies", "The NOAA scan feature is unique because it can scan in the background, all the time. However, most people dont need the weather alerts or dont have NOAA in their country. This mod lets you change the frequencies so you can use the NOAA scan function for something else, but keep in mind that the radio needs the 1050hz tone burst to open squelch. The values below are pre-set to the first 10 PMR446 channels. ", 0);
+            super("NOAA Frequencies", "NOAAスキャン機能は、常にバックグラウンドでスキャンできるという点でユニークです。しかし、ほとんどの人は気象警報を必要としないか、自分の国にNOAAを持っていません。(USAのみ)　このmodを使用すると、周波数を変更してNOAAスキャン機能を他のものに使用できますが、ラジオではスケルチを開くために1050hzトーンバーストが必要であることに注意してください。以下の値は、最初の 10 個の PMR446 チャネル(Private Mobile Radio、446 MHz 欧州におけるUHF無線周波数帯のライセンス免除サービス？）に事前設定されています。", 0);
             this.inputFreq1 = addInputField(this.modSpecificDiv, "Frequency 1 (Hz)", "446006250");
             this.inputFreq2 = addInputField(this.modSpecificDiv, "Frequency 2 (Hz)", "446018750");
             this.inputFreq3 = addInputField(this.modSpecificDiv, "Frequency 3 (Hz)", "446031250");
@@ -821,7 +828,7 @@ modClasses = [
     ,
     class Mod_AMOnAllBands extends FirmwareMod {
         constructor() {
-            super("全てのバンドでAM受信を有効にする", "For some reason, the original firmware only allows the AM setting to work on band 2. This mod allows AM to work on any band.", 0);
+            super("全てのバンドでAM受信を有効にする", "何らかの理由で、元のファームウェアでは、AM受信は BAND2 でしか機能しません。このmodを使用すると、AMは任意の帯域で機能します。メニューでAMをON、OFFして下さい", 0);
         }
 
         apply(firmwareData) {
@@ -850,7 +857,7 @@ modClasses = [
     ,
     class Mod_CustomFm_radio extends FirmwareMod {
         constructor() {
-            super("FMラジオモードの受信範囲", "Changes the FM radio frequency range", "0");
+            super("FMラジオモードの受信範囲", "FMラジオの周波数範囲を変更します", "0");
 
             this.select6476mhz = addRadioButton(this.modSpecificDiv, "64 - 76 MHz", "select6476mhz", "selectFm_radio");
             this.select64108mhz = addRadioButton(this.modSpecificDiv, "64 - 108 MHz", "select64108mhz", "selectFm_radio");
@@ -939,7 +946,7 @@ modClasses = [
     
     class Mod_ChangeContrast extends FirmwareMod {
         constructor() {
-            super("LCD Contrast", "Changes LCD contrast to any value from 0 to 63 (higher is darker). The default value is 31", 0);
+            super("LCD Contrast", "LCDのコントラストを0から63までの任意の値に変更します(高いほど暗くなります)。デフォルト値は 31 です", 0);
 
             this.contrastValue = addInputField(this.modSpecificDiv, "Enter a new contrast value from 0-63:", "31");
         }

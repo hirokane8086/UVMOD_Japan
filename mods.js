@@ -1,7 +1,7 @@
 modClasses = [
     class Mod_APP extends FirmwareMod {
         constructor() {
-            super("Apps", "ファームウェアにアプリケーションを追加します。一部のアプリはフラッシュライトボタンで起動します。使用可能なスペースが非常に限られているため、選択できるアプリは 1 つだけです:", "up to 2770");
+            super("Apps", "ファームウェアにアプリケーションを追加します。一部のアプリはフラッシュライトボタンで起動します。<br>使用可能なスペースが非常に限られているため、選択できるアプリは 1 つだけです:", "up to 2770");
 
             this.selectSbar = addRadioButton(this.modSpecificDiv, "RSSI、Sメーター、バッテリー電圧をメイン画面に表示します By @piotr022, v78.", "selectSbar", "selectApp");
             this.selectGraph = addRadioButton(this.modSpecificDiv, "RSSI、RSSIグラフをメイン画面に表示します By @piotr022, v78.", "selectGraph", "selectApp");

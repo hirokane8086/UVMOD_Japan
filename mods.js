@@ -8,7 +8,7 @@ modClasses = [
             this.selectSpectr = addRadioButton(this.modSpecificDiv, "Spectrum analyzer. Starts with the flashlight button. Up / down (hold) - change the center frequency, 8/2 - zoom in / out, 1/7 - increase / decrease resolution, PTT / EXIT - exit. After exiting, open the menu to refresh the screen. By @piotr022, v78.", "selectSpectr", "selectApp");
             this.selectSpectrM = addRadioButton(this.modSpecificDiv, "Advanced spectrum analyzer. Starts with the flashlight button. Before starting, either turn off the noise reduction (SQL to 0) or turn on the monitoring mode. Up / down - frequency change, 1/7 - sensitivity (measurement time), 2/8 - frequency step, 9/3 - zoom in / out, * / F (hold) - noise reduction level, 5 - backlight, 0 - ignore frequency, EXIT - exit. After exiting, open the menu to refresh the screen. By @fagci, v66.", "selectSpectrM", "selectApp");
             this.selectMessenger = addRadioButton(this.modSpecificDiv, "Text messenger (digital transmission). Starts with the flashlight button. Use the number keys in T9 style for typing a message, MENU - send, EXIT - clear message or exit if message is empty. To confirm a letter (if you need to reuse the same number key), press *. By @piotr022, v78.", "selectMessenger", "selectApp");
-            this.selectPong = addRadioButton(this.modSpecificDiv, "Pong game (first ever mod app). Starts after boot. By @piotr022, v78.", "selectPong", "selectApp");
+            this.selectPong = addRadioButton(this.modSpecificDiv, "卓球ゲーム (first ever mod app). Starts after boot. By @piotr022, v78.", "selectPong", "selectApp");
             this.selectSbar.checked = true;
         }
 

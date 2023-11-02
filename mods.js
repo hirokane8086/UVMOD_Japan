@@ -85,7 +85,7 @@ modClasses = [
     ,
     class Mod_CustomBootscreen extends FirmwareMod {
         constructor() {
-            super("Custom Bootscreen", "Changes the bootscreen of the radio to an image, displayed for 2 seconds on startup. The PONMSG setting in the menu is ignored, custom bootscreen is always shown. Images are automatically compressed by removing blank space on top and bottom. Make a narrow banner if you need to save space. ", "up to 1024");
+            super("Custom Bootscreen", "ブート画面を変更し、起動時に 2 秒間表示します。（ １２８×６４dot ）PONMSG 設定は無視され、ここで設定した画面が表示されます。画像は上下の余白を削って自動圧縮されます。スペースを節約する必要がある場合は、幅の狭いバナーを作成します。", "up to 1024");
 
             this.selectTrollface = addRadioButton(this.modSpecificDiv, "Troll Face (933 Bytes)", "selectTrollface", "selectBootscreen");
 //            this.selectQ = addRadioButton(this.modSpecificDiv, "Quansheng Q Logo (929 Bytes)", "selectQ", "selectBootscreen");

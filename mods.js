@@ -1,7 +1,7 @@
 modClasses = [
     class Mod_APP extends FirmwareMod {
         constructor() {
-            super("Apps", "Adds an application to the firmware. Some apps are started with the flashlight button. Due to very limited space available, you can only select one app:", "up to 2770");
+            super("Apps", "ファームウェアにアプリケーションを追加します。一部のアプリはフラッシュライトボタンで起動します。使用可能なスペースが非常に限られているため、選択できるアプリは 1 つだけです:", "up to 2770");
 
             this.selectSbar = addRadioButton(this.modSpecificDiv, "RSSI, S-Meter and battery voltage readout on the main screen. By @piotr022, v78.", "selectSbar", "selectApp");
             this.selectGraph = addRadioButton(this.modSpecificDiv, "RSSI and RSSI Graph on the main screen. By @piotr022, v78.", "selectGraph", "selectApp");
@@ -64,7 +64,7 @@ modClasses = [
     ,
     class Mod_BatteryIcon extends FirmwareMod {
         constructor() {
-            super("Battery icon", "Changes the battery icon to a more normal looking variant.", 0);
+            super("Battery icon", "バッテリーアイコンをナウいものに変更します。", 0);
         }
 
         apply(firmwareData) {

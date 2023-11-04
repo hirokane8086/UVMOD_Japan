@@ -558,7 +558,7 @@ modClasses = [
     ,
     class Mod_RogerBeep extends FirmwareMod {
         constructor() {
-            super("Roger Beep", "送信終話時に付加するビープ音を変更します。トーン1は150ms、トーン2は80ms再生されます。このmodのデフォルトは、MOTOTRBO™(Motorolaの業務用無線機？) のビープ音に似ています。最大値は 6347 Hz です。 ", 0);
+            super("Roger Beep", "送信終了時に付加するビープ音を変更します。トーン1は150ms、トーン2は80ms再生されます。このmodのデフォルトは、MOTOTRBO™(Motorolaの業務用無線機？) のビープ音に似ています。最大値は 6347 Hz です。 ", 0);
             this.inputTone1 = addInputField(this.modSpecificDiv, "Tone 1 frequency (Hz)", "1540");
             this.inputTone2 = addInputField(this.modSpecificDiv, "Tone 2 frequency (Hz)", "1310");
         }
@@ -620,8 +620,8 @@ modClasses = [
     ,
     class Mod_FrequencyRangeAdvanced extends FirmwareMod {
         constructor() {
-            super("Custom Frequency Ranges", "Changes the frequency range limits.", 0);
-            this.selectSimple = addRadioButton(this.modSpecificDiv, "Simple Mode: Extend Band 1 down to 18 MHz and Band 7 up to 1300 MHz. This is the maximum frequency range of the chip. ", "selectSimpleMode", "selectFrequencyRange");
+            super("Custom Frequency Ranges", "無線機に入力可能な周波数の制限を変更します。", 0);
+            this.selectSimple = addRadioButton(this.modSpecificDiv, "Simple Mode: バンド 1 を 18 MHz まで拡張し、バンド 7 を 1300 MHz まで拡張します。これはチップの最大周波数範囲です。", "selectSimpleMode", "selectFrequencyRange");
             this.selectCustom = addRadioButton(this.modSpecificDiv, "Custom Mode: Manually edit the frequency ranges. ", "selectCustomMode", "selectFrequencyRange");
             this.selectSimple.checked = true;
 
@@ -747,7 +747,7 @@ modClasses = [
     ,
     class Mod_NOAAFrequencies extends FirmwareMod {
         constructor() {
-            super("NOAA Frequencies", "NOAAスキャン機能は、常にバックグラウンドでスキャンできるという点でユニークです。しかし、ほとんどの人は気象警報を必要としないか、自分の国にNOAAを持っていません。(USAのみ)　このmodを使用すると、周波数を変更してNOAAスキャン機能を他のものに使用できますが、ラジオではスケルチを開くために1050hzトーンバーストが必要であることに注意してください。以下の値は、最初の 10 個の PMR446 チャネル(Private Mobile Radio、446 MHz 欧州におけるUHF無線周波数帯のライセンス免除サービス？）に事前設定されています。", 0);
+            super("NOAA Frequencies", "NOAAスキャン機能は、常にバックグラウンドでスキャンできるという点でユニークです。しかし、ほとんどの人は気象警報を必要としないか、自分の国にNOAAを持っていません。(USAのみ)　このmodを使用すると、周波数を変更してNOAAスキャン機能を他のものに使用できますが、ただし、スケルチを開くために1050hzトーンが必要であることに注意してください。以下の値は、最初の 10 個の PMR446 チャネル(注：[Private Mobile Radio 446MHz] 欧州におけるUHF無線ライセンス免除サービスの事らしい？）に事前設定されています。", 0);
             this.inputFreq1 = addInputField(this.modSpecificDiv, "Frequency 1 (Hz)", "446006250");
             this.inputFreq2 = addInputField(this.modSpecificDiv, "Frequency 2 (Hz)", "446018750");
             this.inputFreq3 = addInputField(this.modSpecificDiv, "Frequency 3 (Hz)", "446031250");
